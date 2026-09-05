@@ -1,0 +1,6 @@
+{
+  "name": "KidQuest Academy",
+  "description": "An interactive, colorful, and engaging educational game for children aged 5-12. Features Math, English, Science, Memory, Puzzles, and Drawing activities, complete with parent tracking, voice support, rewards, and daily challenges.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

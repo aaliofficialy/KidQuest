@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom vibrant theme colors for children's UI */
+  --color-kid-blue: #38bdf8;
+  --color-kid-pink: #f472b6;
+  --color-kid-yellow: #facc15;
+  --color-kid-green: #4ade80;
+  --color-kid-purple: #c084fc;
+  --color-kid-orange: #fb923c;
+  --color-kid-cream: #fffbeb;
+}
+
+/* Comic-book / Cartoon styling classes under Natural Tones theme */
+.cartoon-card {
+  background-color: white;
+  border-top: 1px solid #f8fafc;
+  border-left: 1px solid #f8fafc;
+  border-right: 1px solid #f8fafc;
+  border-bottom: 8px solid #cbd5e1;
+  border-radius: 1.75rem; /* rounded-3xl */
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.03), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cartoon-card:hover {
+  transform: translateY(-2px);
+  border-bottom: 10px solid #94a3b8;
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 10px 10px -5px rgba(15, 23, 42, 0.03);
+}
+
+.cartoon-btn {
+  border-top: 1px solid #f8fafc;
+  border-left: 1px solid #f8fafc;
+  border-right: 1px solid #f8fafc;
+  border-bottom: 4px solid #94a3b8;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05);
+  transition: all 0.1s ease-out;
+}
+
+.cartoon-btn:active {
+  transform: translateY(2px);
+  border-bottom-width: 1px;
+}
+
+.cartoon-btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  border-bottom-width: 4px !important;
+}
+
+/* Wiggle animation for gamified headers */
+@keyframes slow-wiggle {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+.animate-wiggle {
+  animation: slow-wiggle 3s ease-in-out infinite;
+}
+
+/* Bounce animation */
+@keyframes super-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-kid-bounce {
+  animation: super-bounce 2s ease-in-out infinite;
+}
+
+/* Confetti particles */
+@keyframes particle-fade {
+  to {
+    opacity: 0;
+    transform: translate3d(var(--x, 0), var(--y, 0), 0) rotate(var(--r, 0deg));
+  }
+}
+
+.confetti-particle {
+  animation: particle-fade 1.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
